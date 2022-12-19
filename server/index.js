@@ -4,7 +4,7 @@ const PORT = 3000 || process.env.PORT;
 const db = require('./db');
 const MovieController = require('./controller/movieController');
 
-app.use(express.static('%PUBLIC_URL%'));
+app.use(express.static('build/'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

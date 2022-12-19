@@ -11,7 +11,7 @@ const getMovies = (req, res) => {
 };
 
 const postMovie = (req, res) => {
-  const movie = req.body.movie;
+  const movie = req.body;
   MovieModel.postMovie(movie, (err, data) => {
     if (err) {
       res.status(500).send();

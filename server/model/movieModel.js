@@ -1,11 +1,23 @@
 const db = require('../db');
 
 const getMovies = (callback) => {
-  // need mongo get function
+  db.getAll((err, movies) => {
+    if (err) {
+      callback(err);
+    } else {
+      callback(null, movies);
+    }
+  })
 };
 
 const postMovie = (movie, callback) => {
-  //need mongo post function
+  db.save(movie, (err, docs) => {
+    if (err) {
+      callback(err);
+    } else {
+      callback(null, docs);
+    }
+  })
 };
 
 module.exports = { getMovies, postMovie };

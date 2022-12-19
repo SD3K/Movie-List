@@ -1,7 +1,6 @@
-import React from 'react';
-import { movie } from '../types';
+import { movie } from "../types";
 
-const MovieListItem = function(props: {movie:movie, key: number}) {
+const MovieListItem = function (props: { movie: movie; key: number }) {
   return (
     <div>
       <div>Title: {props.movie.title}</div>
@@ -9,6 +8,6 @@ const MovieListItem = function(props: {movie:movie, key: number}) {
       <div>Genre: {props.movie.genre}</div>
     </div>
   );
-}
+};
 
 export default MovieListItem;

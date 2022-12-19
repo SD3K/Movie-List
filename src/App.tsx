@@ -1,14 +1,13 @@
-import React from 'react';
-import Header from './components/Header';
-import MovieList from './components/MovieList';
+import Header from "./components/Header";
+import MovieList from "./components/MovieList";
 
-const App = function() {
+const App = function () {
   return (
     <div>
       <Header />
       <MovieList />
     </div>
   );
-}
+};
 
 export default App;
